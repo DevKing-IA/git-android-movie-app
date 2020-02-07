@@ -1,0 +1,1 @@
+[{"outputType":{"type":"MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":9999,"versionName":"2.15.9999-SNAPSHOT","enabled":true,"outputFile":"srgmediaplayer-debug.aar","fullName":"debug","baseName":"debug"},"path":"..\\..\\library_manifest\\debug\\AndroidManifest.xml","properties":{"packageId":"ch.srg.mediaplayer","split":""}}]

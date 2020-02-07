@@ -1,0 +1,117 @@
+// Maven config file
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+def envBuildNumber = System.getenv().BUILD_NUMBER == null ? "9999" : System.getenv().BUILD_NUMBER
+def release = System.getenv().RELEASE
+def suffix = release != null ? (release.equalsIgnoreCase("true") ? "" : "-SNAPSHOT") : "-SNAPSHOT"
+
+project.ext.versionName = VERSION_BASE + '.' + envBuildNumber + suffix
+
+def isReleaseBuild() {
+    return project.versionName.contains("SNAPSHOT") == false
+}
+
+def sonatypeRepositoryUrl
+if (isReleaseBuild()) {
+    sonatypeRepositoryUrl = sonatypeRepo
+} else {
+    sonatypeRepositoryUrl = sonatypeSnapshotRepo
+}
+
+def getRepositoryUsername() {
+    return project.hasProperty("sonatypeUsername") ? sonatypeUsername : ""
+}
+
+def getRepositoryPassword() {
+    return project.hasProperty("sonatypePassword") ? sonatypePassword : ""
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.artifactId = project.name
+            pom.groupId = GROUP
+            pom.version = project.versionName
+            println("ENV_RELEASE  =  ${System.getenv().RELEASE}")
+            println("ENV BUILD NUMBER =  ${System.getenv().BUILD_NUMBER}")
+            println("Archives version name =  ${project.versionName}")
+            repository(url: sonatypeRepositoryUrl) {
+                authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
+            }
+
+            pom.project {
+                packaging POM_PACKAGING
+                description POM_DESCRIPTION
+                url POM_URL
+
+                scm {
+                    url POM_SCM_URL
+                    connection POM_SCM_CONNECTION
+                    developerConnection POM_SCM_DEV_CONNECTION
+                }
+
+                licenses {
+                    license {
+                        name POM_LICENCE_NAME
+                        url POM_LICENCE_URL
+                        distribution POM_LICENCE_DIST
+                    }
+                }
+
+                developers {
+                    developer {
+                        id POM_DEVELOPER_ID
+                        name POM_DEVELOPER_NAME
+                    }
+                }
+            }
+
+            pom.whenConfigured { pom ->
+                println("Current Dependencies ${pom.dependencies}")
+                pom.dependencies.each { dep ->
+                    println("Processing ${dep}")
+                    if (dep.getVersion() == "unspecified") {
+                        println("Updating Dependencies")
+                        dep.setGroupId(GROUP)
+                        dep.setVersion(project.versionName)
+                        println("Updated ${dep}")
+                    }
+                }
+            }
+        }
+    }
+
+    task androidJavadocs(type: Javadoc) {
+        source = android.sourceSets.main.java.srcDirs
+        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+        failOnError = false
+        options.links("http://docs.oracle.com/javase/7/docs/api/");
+        options.links("http://d.android.com/reference/");
+        exclude '**/BuildConfig.java'
+        exclude '**/R.java'
+    }
+
+    task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+        classifier = 'javadoc'
+        from androidJavadocs.destinationDir
+    }
+
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.sourceFiles
+    }
+
+    task gitTagArchive() {
+        if (isReleaseBuild()) {
+            def tagWithVersionCommand = 'git tag -a ' + project.versionName + ' -m ' + project.versionName
+            tagWithVersionCommand.execute()
+            'git push origin --tags'.execute()
+        }
+    }
+
+    artifacts {
+        archives androidSourcesJar
+        archives androidJavadocsJar
+    }
+}

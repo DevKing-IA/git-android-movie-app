@@ -1,0 +1,31 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ch.srg.mediaplayer"
+4    android:versionCode="9999"
+5    android:versionName="2.15.9999-SNAPSHOT" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WAKE_LOCK" />
+11-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:4:5-68
+11-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:4:22-65
+12
+13    <!--
+14      The following permissions are only necessary for tests. It would be necessary to get read of
+15      them if someone wanted to build an app with the service that does not acccess the internet...
+16    -->
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:8:5-67
+17-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:8:22-64
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:9:5-79
+18-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:9:22-76
+19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+19-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:10:5-76
+19-->E:\Android\EKM\3.6\evilkingmedia-EMBEDCORRETTOANDROID4\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:10:22-73
+20
+21</manifest>

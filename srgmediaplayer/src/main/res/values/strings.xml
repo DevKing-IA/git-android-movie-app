@@ -1,0 +1,3 @@
+<resources>
+    <string name="time_pending" translatable="true">--:--</string>
+</resources>

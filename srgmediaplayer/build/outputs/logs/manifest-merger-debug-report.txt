@@ -1,0 +1,53 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+	package
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:2:5-33
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:1-11:12
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:4:5-68
+	android:name
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:4:22-65
+uses-permission#android.permission.INTERNET
+ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:8:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml:10:22-73
+uses-sdk
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+		ADDED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml
+		INJECTED from E:\work-station\2019.11.26 android tv app\evilkingmedia1\srgmediaplayer\src\main\AndroidManifest.xml

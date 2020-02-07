@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingRight="5dp"
+    android:paddingLeft="60dp"
+    android:clipToPadding="false"
+    android:paddingEnd="5dp"
+    android:paddingStart="60dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message_body"
+        android:background="@drawable/my_message"
+        android:textColor="#fff"
+        android:padding="10dp"
+        android:textSize="15dp"
+        android:layout_alignParentRight="true"
+        android:text="Placeholder message"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

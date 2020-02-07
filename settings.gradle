@@ -1,0 +1,5 @@
+File extraSettings = new File(rootDir, 'extra-settings.gradle')
+if (extraSettings.exists()) {
+    apply from: extraSettings
+}
+include ':app', ':csplayer',':srgmediaplayer', ':automotive',':common'

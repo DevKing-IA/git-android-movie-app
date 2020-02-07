@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.exoplayer:extension-mediasession:2.10.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/815c06352d6925890af0267ff0c99677/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/815c06352d6925890af0267ff0c99677/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/815c06352d6925890af0267ff0c99677/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/extension-mediasession/2.10.2/c654ab1a1cd30ed61f0e802edd192b3ae66f396e/extension-mediasession-2.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlack">#000000</color>
+    <color name="dark">#424242</color>
+    <color name="colorRed">#FFA20303</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlackBright">#252525</color>
+
+    <!-- New Gradient-->
+    <color name="rossoscuro">#550101</color>
+    <color name="rossochiaro">#A20000</color>
+
+    <color name="color1">#66000000</color>
+
+    <color name="colorGreen">#35910F</color>
+    <color name="colorGray">#605B59</color>
+    <color name="colorBlue">#1852C6</color>
+    <color name="colorSky">#90D6D8</color>
+    <color name="colorYellow">#E5C92A</color>
+
+    <color name="colorTop">#FC0F85</color>
+    <color name="colorBottom">#100CA9</color>
+    <color name="colorCenter">#EC3780</color>
+    <color name="colorTest">#1B2744</color>
+
+    <color name="overlay_dark_10">#1A000000</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="overlay_dark_30">#4D000000</color>
+    <color name="overlay_dark_40">#66000000</color>
+    <color name="overlay_dark_90">#E6000000</color>
+
+    <color name="grey_transparent">#90cccccc</color>
+
+    <color name="deep_orange_400">#FF7043</color>
+
+    <color name="nav_head_bg">#202020</color>
+
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_400">#BDBDBD</color>
+
+    <color name="red_400">#EF5350</color>
+    <color name="red_600">#E53935</color>
+
+    <color name="blue_400">#42A5F5</color>
+
+    <color name="indigo_400">#5C6BC0</color>
+
+    <color name="orange_400">#FFA726</color>
+
+    <color name="light_green_400">#9CCC65</color>
+
+    <color name="blue_grey_400">#78909C</color>
+
+    <color name="green_500">#4CAF50</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="mediaListBackground">#F1F1F1</color>
+
+    <color name="mediaControlColor">#f8f8f8</color>
+
+    <color name="nowPlayingBackground">#eff0f0</color>
+    <color name="nowPlayingWhiteBackground">#fdfdfd</color>
+
+    <color name="menu_icon_tint">#ffffff</color>
+
+
+
+
+    <!-- Welcome activity -->
+
+    <!-- Screens background color-->
+
+    <color name="bg_screen1">#20d2bb</color>
+    <color name="bg_screen2">#3395ff</color>
+    <color name="bg_screen3">#c873f4</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#E7E7E7</color>
+    <color name="dot_dark_screen2">#E7E7E7</color>
+    <color name="dot_dark_screen3">#E7E7E7</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#A80000</color>
+    <color name="dot_light_screen2">#A80000</color>
+    <color name="dot_light_screen3">#A80000</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+    </array>
+
+</resources>

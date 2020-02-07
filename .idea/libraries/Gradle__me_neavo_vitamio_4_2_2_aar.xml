@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: me.neavo:vitamio:4.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dbf91c63e588ab58f707d34e49571bb8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dbf91c63e588ab58f707d34e49571bb8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.neavo/vitamio/4.2.2/648f918fd1d9823a25cc68be1ca3fe7dc5cd7346/vitamio-4.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

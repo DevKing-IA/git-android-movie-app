@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="albums_title">Per categoria</string>
+    <string name="allowed_caller_log">
+        Caller has a valid certificate, but its package doesn\'t match any expected package for the
+        given certificate. To allow this caller, add the following to the allowed callers list:\n
+        <![CDATA[
+        <signature name=\"%1$s\" package=\"%2$s\">\n\t<key>%3$s</key>\n</signature>\n
+        ]]>
+    </string>
+    <string name="error_media_not_found">Non riesco a trovare questo streaming.</string>
+    <string name="notification_channel">Stai ascoltando</string>
+    <string name="notification_channel_description">Mostra quale audio sta riproducendo EKM</string>
+    <string name="notification_pause">Pausa</string>
+    <string name="notification_play">Play</string>
+    <string name="notification_skip_to_next">Indietro</string>
+    <string name="notification_skip_to_previous">Avanti</string>
+    <string name="recommended_title">Raccomandati da EKM</string>
+</resources>

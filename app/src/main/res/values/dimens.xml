@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="card_margin">10dp</dimen>
+    <dimen name="image_width">100dp</dimen>
+    <dimen name="image_height">100dp</dimen>
+    <dimen name="title">20dp</dimen>
+    <dimen name="rating">15dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="small">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="popup_width">350dp</dimen>
+    <dimen name="video_webview_height">250dp</dimen>
+
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <dimen name="spacing_mlarge">20dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
+
+
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="media_item_height">72dp</dimen>
+    <dimen name="media_item_control_margin">4dp</dimen>
+    <dimen name="media_item_icon_margin_start">12dp</dimen>
+    <dimen name="media_item_text_margin_start">4dp</dimen>
+
+    <dimen name="media_item_art">72dp</dimen>
+
+    <dimen name="media_item_radius">4dp</dimen>
+    <dimen name="media_item_half_radius">2dp</dimen>
+    <dimen name="media_item_negative_half_radius">-2dp</dimen>
+
+    <dimen name="now_playing_album_art_margin">72dp</dimen>
+    <dimen name="now_playing_skip_top_margin">42dp</dimen>
+    <dimen name="now_playing_skip_margin">8dp</dimen>
+    <dimen name="now_playing_play_pause_top_margin">42dp</dimen>
+    <dimen name="now_playing_play_pause_bottom_margin">52dp</dimen>
+
+    <dimen name="now_playing_title_top_margin">32dp</dimen>
+    <dimen name="now_playing_title_bottom_margin">8dp</dimen>
+    <dimen name="now_playing_artist_bottom_margin">32dp</dimen>
+    <dimen name="now_playing_text_padding">16dp</dimen>
+
+    <dimen name="now_playing_title_size">32sp</dimen>
+    <dimen name="now_playing_artist_size">18sp</dimen>
+
+
+
+
+
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">120dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+</resources>

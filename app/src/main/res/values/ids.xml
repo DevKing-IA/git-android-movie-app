@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="backBtn" />
+    <item type="id" name="webView" />
+    <item type="id" name="fb_logout"/>
+    <item type="id" name="fb_profile"/>
+    <item type="id" name="fb_unread"/>
+</resources>

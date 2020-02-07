@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.dtx12:actions:0.1.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/815055d63e5aca259b1884caab2ca500/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/815055d63e5aca259b1884caab2ca500/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.dtx12/actions/0.1.4/d835be60c41c613a22eb24abb810069684a1a5a1/actions-0.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

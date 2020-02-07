@@ -1,0 +1,95 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        // App SDK versions.
+        compileSdkVersion = 28
+        minSdkVersion = 19
+        targetSdkVersion = 28
+
+        // Dependency versions.
+        androidx_app_compat_version = '1.1.0-alpha04'
+        androidx_car_version = '1.0.0-alpha7'
+        androidx_core_ktx_version = '1.0.1'
+        androidx_media_version = '1.0.1'
+        androidx_preference_version = '1.0.0'
+        androidx_test_runner_version = '1.1.1'
+        arch_lifecycle_version = '2.0.0'
+        constraint_layout_version = '1.1.3'
+        espresso_version = '3.1.1'
+        exoplayer_version = '2.10.0'
+        glide_version = '4.9.0'
+        gms_strict_version_matcher_version = '1.0.3'
+        gradle_version = '3.1.4'
+        gson_version = '2.8.5'
+        junit_version = '4.12'
+        kotlin_version = '1.3.50'
+        kotlin_coroutines = '1.1.0'
+        materialVersion = '1.0.0'
+        recycler_view_version = '1.0.0'
+        robolectric_version = '4.2'
+        test_runner_version = '1.1.0'
+    }
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://mvnrepository.com/artifact/me.neavo/vitamio' }
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+    }
+
+
+    dependencies {
+
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.google.gms:google-services:4.3.2'
+        classpath 'io.fabric.tools:gradle:1.31.2'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.android.gms:strict-version-matcher-plugin:$gms_strict_version_matcher_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+
+        // Work around https://code.google.com/p/android/issues/detail?id=69270.
+        def androidHome = System.getenv("ANDROID_HOME")
+        maven {
+            url "$androidHome/extras/android/m2repository/"
+        }
+    }
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    // sdk and tools
+    minSdkVersion = 16
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+
+    //libs
+    androidTestVersion = '1.2.0'
+    espressoVersion = '3.2.0'
+    junitVersion = '4.12'
+    mediaVersion = '1.1.0'
+    mediarouterVersion = '1.1.0'
+    exoPlayerVersion = '2.10.2'
+    appcompatVersion = '1.1.0'
+    annotationVersion = '1.1.0'
+    recyclerViewVersion = '1.0.0'
+    constraintLayoutVersion = '1.1.3'
+}

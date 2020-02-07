@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".player.VideoPlayerActivity"
+    android:background="@android:color/black">
+
+    <ch.srg.mediaplayer.SRGMediaPlayerView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:videoScale="center_inside"
+        app:containerAspectRatio="auto"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:background="@android:color/black"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/play_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/p_play" />
+        <ImageButton
+            android:id="@+id/pause_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/p_pause"
+            android:visibility="gone"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:thumb="@drawable/seek_thumb"
+            android:progressDrawable="@drawable/progress"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

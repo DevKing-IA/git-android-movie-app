@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.evilkingmediabeta">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.CLEAR_APP_CACHE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <application
+        android:name="com.evilkingmediabeta.MyAppClass"
+        android:allowBackup="true"
+        android:banner="@drawable/banner"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:launchMode="singleTop"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:supportsRtl"
+
+        android:targetSandboxVersion="2">
+
+        <dist:module dist:instant="true" />
+
+
+        <!-- Declare that UAMP supports Android Auto. -->
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.google.android.exoplayer2.ext.cast.DefaultCastOptionsProvider" />
+
+        <activity
+            android:name="com.evilkingmediabeta.SplashScreenActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/MyTheme"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <<<<<Main Activity -->
+
+
+        <activity
+            android:name="com.evilkingmediabeta.CategoryActivity"
+            android:theme="@style/MyTheme" /><!-- Main Activity>>>>> -->
+        <!-- <<<<<On Demand Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.demand.FilmCategoryActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.demand.CinetecaWebCasterActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.evilkingmediabeta.demand.WebViewActivityServer3"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" /> <!-- On Demand Section Activities>>>>> -->
+        <!-- <<<<<Live Tv Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.livetv.LiveTvCategoryActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.livetv.TvWebCasterActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.evilkingmediabeta.livetv.HaremWebCasterActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.evilkingmediabeta.livetv.HaremActivity"
+            android:theme="@style/MyTheme" /> <!-- Live Tv Section Activities>>>>> -->
+        <!-- <<<<<Cartoon Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.cartoon.CartoonCategoryActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.cartoon.CartoonWebCasterActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name="com.evilkingmediabeta.cartoon.Film2Activity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+
+        <activity
+            android:name="com.evilkingmediabeta.cartoon.YoutubeCartoonActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.evilkingmediabeta.cartoon.CartoonActivitySubServer1"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.cartoon.ViewCartoonsActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.cartoon.AnimeUnityActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.cartoon.AnimeUnityDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" /> <!-- Cartoon Section Activities>>>>> -->
+        <!-- <<<<<Musica Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.musica.MusicMainActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.musica.MusicWebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.evilkingmediabeta.musica.MusicMainActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.musica.MusicWebViewActivity2"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.evilkingmediabeta.musica.MusicMainActivity"
+            android:theme="@style/MyTheme" />
+        <!-- Musica Section Activities>>>>> -->
+        <!-- <<<<<Sports Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsCategoryActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsHdStreamsActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsTopLiveActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsEKSportActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsCricfreeCategoryDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsCricfreeDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsMyp2pActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsMyp2pDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsSoccerActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsSoccerSecondActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.FootballOnDemandActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.FootballOnDemandDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.FootballFullMatchActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.FootballFullMatchDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsStreamingActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsCategoryActivityServer2"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsCricfreeActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsWebCasterActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsEmbedScrapeActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.evilkingmediabeta.sports.SportsWebViewActivity"
+            android:theme="@style/MyTheme"
+            android:configChanges="orientation|screenSize"/>
+        <activity
+            android:name="com.evilkingmediabeta.sports.ekmsportsembed.DetailsActivity"
+            android:theme="@style/MyTheme"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="sensor"/>
+        <activity
+            android:name="com.evilkingmediabeta.sports.ekmsportsembed.EkmSportsEmbedActivity"
+            android:theme="@style/MyTheme"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="sensor"/>
+        <activity
+            android:name="com.evilkingmediabeta.sports.ekmsportsembed.ItemMovieActivity"
+            android:theme="@style/MyTheme"
+            android:screenOrientation="sensor"/>
+        <activity
+            android:name="com.evilkingmediabeta.sports.ekmsportsembed.ItemSeriesActivity"
+            android:theme="@style/MyTheme"
+            android:screenOrientation="sensor"/>
+        <activity
+            android:name="com.evilkingmediabeta.sports.ekmsportsembed.ItemTVActivity"
+            android:theme="@style/MyTheme"
+            android:screenOrientation="sensor"/>
+
+        <activity android:name="com.evilkingmediabeta.sports.ekmsportsembed.TermsActivity"
+            android:theme="@style/MyTheme"
+            android:screenOrientation="sensor"/>
+
+        <!-- Sports Section Activities>>>>> -->
+        <!-- <<<<<Videoteca Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.videoteca.VideoTecaActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.videoteca.DocumentariActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.videoteca.DocumentariVideoListActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.videoteca.DocumentariVideoLinkActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.videoteca.VideoTecaEmbedActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- Videoteca Section Activities>>>>> -->
+        <!-- <<<<<Epg Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.utilitymenu.EPGActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.utilitymenu.UtilityMenuActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.utilitymenu.EPGDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.utilitymenu.EPGProgramDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" /> <!-- Epg Section Activities>>>>> -->
+        <!-- <<<<<Meteo Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.meteo.MeteoActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" /> <!-- Meteo Section Activities>>>>> -->
+        <!-- <<<<<Libri Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.libri.LibriActivity"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.libri.LibriWebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" /> <!-- Libri Section Activities>>>>> -->
+        <!-- <<<<<My Web Caster Section Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.mywebcaster.MyWebCasterActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" /> <!-- My Web Caster Section Activities>>>>> -->
+        <!-- <<<<<Chat Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.chat.ContactActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.evilkingmediabeta.chat.ChatActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- Chat Activities>>>>> -->
+        <!-- <<<<<Share Activities -->
+        <activity
+            android:name="com.evilkingmediabeta.share.ShareActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.cerca.NewCercaDialog"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:launchMode="singleTask"
+            android:name="com.evilkingmediabeta.share.ShareVideoActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" /> <!-- Share Activities>>>>> -->
+        <!-- <<<<<Useful Activities -->
+        <activity
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:launchMode="singleTask"
+            android:name="com.evilkingmediabeta.player.VideoPlayerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/CropImageActivityTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.player.LiveStreamViewerActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name="com.evilkingmediabeta.player.WebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme" /> <!-- Useful Activities>>>>> -->
+
+        <activity
+            android:name="com.evilkingmediabeta.webview.LiveChannelsAce1Activity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/MyTheme" />
+
+        <activity
+            android:name="com.evilkingmediabeta.webview.LiveEventsAce2Activity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/MyTheme" />
+
+        <activity
+            android:name="com.evilkingmediabeta.webview.EPGView"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/MyTheme" />
+
+
+        <activity
+            android:name="com.evilkingmediabeta.webview.SearchAceFixActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/MyTheme" />
+
+
+        <activity
+            android:name="com.evilkingmediabeta.cerca.FilmCercaActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Cerca" />
+
+        <activity
+            android:name="com.evilkingmediabeta.cerca.CartoniCercaActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/Cerca" />
+
+        <activity
+            android:name="com.evilkingmediabeta.cerca.IPTVCercaActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/Cerca" />
+
+        <activity
+            android:name="com.evilkingmediabeta.cerca.SerieTVCercaActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/Cerca" />
+
+        <activity
+            android:name="com.evilkingmediabeta.cerca.SportCercaActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/Cerca" />
+
+        <activity
+            android:name="com.evilkingmediabeta.cerca.MusicaCercaActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/Cerca" />
+        <activity
+            android:name="com.evilkingmediabeta.cerca.CercaGlobaleActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/Cerca" />
+
+
+        <!-- New harem -->
+
+        <activity
+            android:name="com.evilkingmediabeta.livetv.HaremSplash"
+            android:theme="@style/MyTheme"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.utilitymenu.InfoDispositivoActivity"
+            android:theme="@style/MyTheme"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.series.SeriesActivityServer4"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+        <activity
+            android:name="com.evilkingmediabeta.series.SeriesActivityCatServer4"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.utilitymenu.SpeedTestActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.webview.NewsWebView"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.webview.UpdateView"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.webview.FixiFrameView"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.WelcomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.demand.Film2Activity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+
+        <activity
+            android:name="com.evilkingmediabeta.demand.Serie2Activity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+        <!-- Utility -->
+
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesCategoryActivity" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityCatServer1" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityServer1" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityCatServer2" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityServer2" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityCategoryServer2" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityServer3" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+
+        <activity
+            android:name="com.evilkingmediabeta.series.SeriesActivityCategoryServer4"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyTheme"/>
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityEpisodServer1" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityEpisodServer3" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.WebViewActivitySeries2" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+
+        <!-- <activity -->
+        <!-- android:name=".adapter.BindListAdapterMovie2" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+        <!-- <activity -->
+        <!-- android:name=".series.SeriesActivityCatServer3" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/MyTheme" /> -->
+
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+
+
+        <!-- This is for Android Auto -->
+
+        <activity android:name="com.evilkingmediabeta.radio.uamp.MainActivity">
+            <!-- App links for http -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="example.android.com"
+                    android:pathPattern="/uamp"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <!-- App links for https -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="example.android.com"
+                    android:pathPattern="/uamp"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        Declare the common MediaBrowserService for use in the mobile app, including
+        with the Android Auto app.
+        -->
+        <service
+            android:name="com.evilkingmediabeta.radio.uamp.media.MusicService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService">
+
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

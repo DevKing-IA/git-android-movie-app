@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/automotive/automotive.iml" filepath="$PROJECT_DIR$/automotive/automotive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/csplayer/csplayer.iml" filepath="$PROJECT_DIR$/csplayer/csplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evilkingmedia1.iml" filepath="$PROJECT_DIR$/evilkingmedia1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srgmediaplayer/srgmediaplayer.iml" filepath="$PROJECT_DIR$/srgmediaplayer/srgmediaplayer.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        def buildNumber = Integer.parseInt(System.getenv().BUILD_NUMBER == null ? '9999' : System.getenv().BUILD_NUMBER)
+        def release = System.getenv().RELEASE
+        versionCode buildNumber
+        versionName VERSION_BASE + "." + buildNumber
+        versionNameSuffix release != null ? (release.equalsIgnoreCase("true") ? "" : "-SNAPSHOT") : "-SNAPSHOT"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    // Testing-only dependencies
+    androidTestImplementation "androidx.test:runner:$rootProject.androidTestVersion"
+    androidTestImplementation "androidx.test:rules:$rootProject.androidTestVersion"
+
+    implementation files('libs/android_malibrary.jar')
+
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompatVersion"
+    implementation "androidx.annotation:annotation:$rootProject.annotationVersion"
+    implementation "androidx.mediarouter:mediarouter:$rootProject.mediarouterVersion"
+    implementation "androidx.media:media:$rootProject.mediaVersion"
+
+    implementation "com.google.android.exoplayer:exoplayer-core:$rootProject.exoPlayerVersion"
+    implementation "com.google.android.exoplayer:exoplayer-hls:$rootProject.exoPlayerVersion"
+    implementation "com.google.android.exoplayer:exoplayer-dash:$rootProject.exoPlayerVersion"
+    implementation "com.google.android.exoplayer:exoplayer-ui:$rootProject.exoPlayerVersion"
+    implementation "com.google.android.exoplayer:extension-mediasession:$rootProject.exoPlayerVersion"
+}
+
+apply from: '../utilities.gradle'

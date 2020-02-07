@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageview"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/default_profile_image"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/avatar_textview"
+        android:scaleType="centerInside"
+        android:background="@drawable/circle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="R"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message_body"
+        android:background="@drawable/their_message"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:text="How are you doing? This is a long message that should probably wrap." />
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name" translatable="false">Evil King Media</string>
+
+    <string name="fa_icon_user" translatable="false">&#xf0e0;</string>
+    <string name="fa_icon_setting" translatable="false">&#xf013;</string>
+    <string name="fa_icon_off" translatable="false">&#xf011;</string>
+    <string name="fa_icon_info" translatable="false">&#xf05a;</string>
+    <string name="fa_icon_record" translatable="false">&#xf03d;</string>
+    <string name="fa_icon_history" translatable="false">&#xf1da;</string>
+    <string name="title_activity_sports_server5" translatable="false">SportsActivityServer5</string>
+    <string name="title_activity_cartoon_category" translatable="false">CartoonCategoryActivity</string>
+
+    <string name="ads_app_id" translatable="false">ca-app-pub-4680523224254053~6361457393</string>
+    <string name="banner_ads_unit_id" translatable="false">ca-app-pub-4680523224254053/6169885702</string>
+    <string name="notification_channel_id" translatable="false">ekm_notification</string>
+
+    <string name="featured_tv_channels" translatable="false">Last events</string>
+    <string name="explore_by_genre" translatable="false">Explore By Genre</string>
+    <string name="explore_by_country" translatable="false">Explore By Country</string>
+    <string name="more" translatable="false">Altro</string>
+    <string name="latest_movie" translatable="false">Live Streaming</string>
+    <string name="latest_tv_series" translatable="false">Channels</string>
+    <string name="no_item_found" translatable="false">Nessun oggetto trovato</string>
+    <string name="no_internet" translatable="false">Oops.. nessuna connessione ad Internet!</string>
+    <string name="fetch_error" translatable="false">Impossibile ricevere dati dal Server. Manutenzione?</string>
+    <string name="share_body" translatable="false">I would like to share this TV</string>
+    <string name="dummy_name" translatable="false">Jhon Doe</string>
+    <string name="server" translatable="false">Cerca</string>
+    <string name="_1080p" translatable="false">1080P</string>
+    <string name="international" translatable="false">International</string>
+    <string name="regular_program" translatable="false">Regular Program</string>
+    <string name="live" translatable="false">LIVE</string>
+    <string name="watching_on" translatable="false">Watching live on</string>
+    <string name="watching_catch_up_tv" translatable="false">Watching Catch-up TV</string>
+    <string name="all_tv_channel" translatable="false">All TV Channels</string>
+    <string name="error_toast" translatable="false">Something went wrong ! try later</string>
+    <string name="program_guide" translatable="false">Program Guide</string>
+    <string name="director" translatable="false">Director :</string>
+    <string name="genre" translatable="false">Genere</string>
+    <string name="cast_n_crew" translatable="false">Cast and Crew</string>
+    <string name="you_may_also_like" translatable="false">You may also like</string>
+    <string name="description" translatable="false">Descrizione</string>
+    <string name="related_movie" translatable="false">Streaming Correlati</string>
+    <string name="testo" translatable="false">Sito Ufficiale: evilkingmedia.com - Assistenza Web: androidaba.com - Canale Telegram: https://t.me/evilkingmedia</string>
+
+    <string name="skip_back_10s" translatable="false">Skip back 10s</string>
+    <string name="skip_forward_10s" translatable="false">Skip forward 10s</string>
+    <string name="play" translatable="false">Play</string>
+    <string name="pause" translatable="false">Pause</string>
+
+    <string name="menu_music_queue" translatable="false">Queue</string>
+    <string name="album_art_alt" translatable="false">Album art</string>
+
+    <string name="duration_unknown" translatable="false">--:--</string>
+    <string name="duration_format" translatable="false">%d:%02d</string>
+    <string name="rai_mediaset" translatable="false"><![CDATA[Rai & Mediaset]]></string>
+    <string name="live_channels" translatable="false"><![CDATA[Live & Channels]]></string>
+
+    <string name="title_activity_welcome" translatable="false">Home Screen</string>
+    <string name="next" translatable="false">AVANTI</string>
+    <string name="skip" translatable="false">SALTA</string>
+    <string name="start" translatable="false">OK</string>
+
+    <string name="slide_1_title" translatable="false">Benvenuto su Evil King Media</string>
+    <string name="slide_1_desc" translatable="false">A quanto pare questo è il tuo primo avvio! Fai uno swipe oppure premi il tasto "AVANTI" dal tuo telecomando.</string>
+
+    <string name="slide_2_title" translatable="false">Finalmente è arrivata la funzione CERCA!</string>
+    <string name="slide_2_desc" translatable="false">Erano mesi che stavamo studiando un metodo.. lo abbiamo trovato! </string>
+
+    <string name="slide_3_title" translatable="false">Versione BETA!</string>
+    <string name="slide_3_desc" translatable="false">Ricordati che questa è una versione beta. Potresti riscontrare degli errori nel codice !</string>
+
+    <string name="play_again_desc" translatable="false">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again" translatable="false">Play Again</string>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,108 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    maven {
+        url "https://maven.ecetest.rts.ch/content/groups/public/"
+    }
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        def buildNumber = Integer.parseInt(System.getenv().BUILD_NUMBER == null ? '9999' : System.getenv().BUILD_NUMBER)
+        def release = System.getenv().RELEASE
+        versionCode buildNumber
+        versionName VERSION_BASE + "." + buildNumber
+        versionNameSuffix release != null ? (release.equalsIgnoreCase("true") ? "" : "-SNAPSHOT") : "-SNAPSHOT"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "junit:junit:$rootProject.junitVersion"
+
+    //noinspection GradleDependency
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompatVersion"
+    //noinspection GradleDependency
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
+
+    // Here we use implementation instead of androidTestImplementation as srgmediaplayertestutils is used only in test builds
+    implementation "androidx.test:rules:$rootProject.androidTestVersion"
+    implementation "androidx.test:runner:$rootProject.androidTestVersion"
+    implementation 'org.hamcrest:hamcrest-library:1.3'
+    implementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+    implementation "androidx.test.espresso:espresso-contrib:$rootProject.espressoVersion"
+    implementation "androidx.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
+
+    implementation project(':srgmediaplayer')
+}
+
+/*
+Resolves dependency versions across test and production APKs, specifically, transitive
+dependencies. This is required since Espresso internally has a dependency on support-annotations.
+*/
+configurations.all {
+    //resolutionStrategy.force "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex") || !requested.name.contains("Test")) {
+                details.useVersion '25.4.0'
+            }
+        }
+    }
+}
+
+/*
+All direct/transitive dependencies shared between your test and production APKs need to be
+excluded from the test APK! This is necessary because both APKs will contain the same classes. Not
+excluding these dependencies from your test configuration will result in an dex pre-verifier error
+at runtime. More info in this tools bug: (https://code.google.com/p/android/issues/detail?id=192497)
+*/
+configurations.compile.dependencies.each { compileDependency ->
+    configurations.androidTestCompile.dependencies.each { androidTestCompileDependency ->
+        println "Excluding compile dependency: ${compileDependency.getName()}"
+        configurations.androidTestCompile.exclude module: "${compileDependency.getName()}"
+    }
+}
+
+/*
+ * Workaround for https://code.google.com/p/android/issues/detail?id=182715
+ *
+ * The Android Gradle plugin is creating DataBindingExportBuildInfoTasks for the instrumentation
+ * APK that generates from the app APKs layouts. This creates duplicate classes in the app and
+ * instrumentation APK which leads to
+ *      java.lang.IllegalAccessError: Class ref in pre-verified class resolved to unexpected implementation
+ * on older devices.
+ *
+ * The workaround is to get the DataBindingExportBuildInfoTasks tasks for the instrumentation APK
+ * and delete the files right after it creates them.
+ */
+tasks.withType(com.android.build.gradle.internal.tasks.databinding.DataBindingExportBuildInfoTask) { task ->
+    if (task.name.endsWith("AndroidTest")) {
+        task.finalizedBy(tasks.create("${task.name}Workaround") << {
+            task.output.deleteDir()
+        })
+    }
+}
+
+apply from: '../utilities.gradle'

@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FILM"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/highlight_button"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"/>
+        <Button
+            android:id="@+id/btnSerieTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SERIE TV"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/highlight_button"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="10dp"
+        android:hint="Search..."
+        android:drawableStart="@drawable/ic_search"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/categories"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/etSearch"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
